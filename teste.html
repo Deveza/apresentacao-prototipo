@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Minha Tela</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Imports do Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<img src="cardio-pulmonar.png" alt="Logo">
+		</div>
+	</header>
+
+	<main>
+		<div class="grid-container">
+			<div class="grid-item" id="item1">
+				<img src="paciente.png" alt="Imagem 1">
+				<p>Descrição da Imagem 1</p>
+				<button class="btn-add-status" data-toggle="modal" data-target="#status-modal">Adicionar
+					Status</button>
+			</div>
+			<div class="grid-item" id="item2">
+				<img src="paciente.png" alt="Imagem 2">
+				<p>Descrição da Imagem 2</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item3">
+				<img src="paciente.png" alt="Imagem 3">
+				<p>Descrição da Imagem 3</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item4">
+				<img src="paciente.png" alt="Imagem 4">
+				<p>Descrição da Imagem 4</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item5">
+				<img src="paciente.png" alt="Imagem 5">
+				<p>Descrição da Imagem 5</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item6">
+				<img src="paciente.png" alt="Imagem 6">
+				<p>Descrição da Imagem 6</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item7">
+				<img src="paciente.png" alt="Imagem 7">
+				<p>Descrição da Imagem 7</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item8">
+				<img src="paciente.png" alt="Imagem 8">
+				<p>Descrição da Imagem 8</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item9">
+				<img src="paciente.png" alt="Imagem 9">
+				<p>Descrição da Imagem 9</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item10">
+				<img src="paciente.png" alt="Imagem 10">
+				<p>Descrição da Imagem 10</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item11">
+				<img src="paciente.png" alt="Imagem 11">
+				<p>Descrição da Imagem 11</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item12">
+				<img src="paciente.png" alt="Imagem 12">
+				<p>Descrição da Imagem 12</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item13">
+				<img src="paciente.png" alt="Imagem 13">
+				<p>Descrição da Imagem 13</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item14">
+				<img src="paciente.png" alt="Imagem 14">
+				<p>Descrição da Imagem 14</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item15">
+				<img src="paciente.png" alt="Imagem 15">
+				<p>Descrição da Imagem 15</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item16">
+				<img src="paciente.png" alt="Imagem 16">
+				<p>Descrição da Imagem 16</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item17">
+				<img src="paciente.png" alt="Imagem 17">
+				<p>Descrição da Imagem 17</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item18">
+				<img src="paciente.png" alt="Imagem 18">
+				<p>Descrição da Imagem 18</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+			<div class="grid-item" id="item19">
+				<img src="paciente.png" alt="Imagem 19">
+				<p>Descrição da Imagem 19</p>
+				<button class="btn-add-status">Adicionar Status</button>
+			</div>
+		</div>
+		<!-- Modal de seleção de status -->
+		<!-- Modal -->
+		<div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="status-modal-label"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="status-modal-label">Selecione o Status</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="btn-group-toggle" data-toggle="buttons">
+							<div class="grid-container" id="modal-container">
+								<button type="button" class="btn btn-dark" data-status="1">Conexão Perdida</button>
+								<button type="button" class="btn btn-light" data-status="2">Leito Vazio</button>
+								<button type="button" class="btn btn-success" data-status="3">Baixo Risco</button>
+								<button type="button" class="btn btn-warning" data-status="4">Moderado Risco</button>
+								<button type="button" class="btn btn-danger" data-status="5">Alto Risco</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<audio id="sem_conexao" src="sumiu.mp3"></audio>
+	<audio id="alarme" src="alarme.mp3"></audio>
+	<script>
+		$(document).ready(function () {
+			$('.btn-add-status').on('click', function () {
+				var $item = $(this).closest('.grid-item');
+				$('#status-modal').data('item', $item).modal('show');
+			});
+
+			$('#status-modal button').on('click', function () {
+				var $item = $('#status-modal').data('item');
+				var status = $(this).data('status');
+				var itemId = $item.attr('id');
+				var $img = $item.find('img');
+
+				$item.removeClass('selected-1 selected-2 selected-3 selected-4 selected-5');
+				$item.addClass('selected-' + status);
+
+				if (status === 1) {
+					$img.attr('src', 'conexao-perdida.png');
+					var $audio = $('#sem_conexao')[0];
+					$audio.play();
+				} else if (status === 5) {
+					$img.attr('src', 'paciente.png');
+					var $audio = $('#alarme')[0];
+					$audio.play();
+				} else {
+					$img.attr('src', 'paciente.png');
+				}
+
+				$('#status-modal').modal('hide');
+			});
+		});
+	</script>
+</body>

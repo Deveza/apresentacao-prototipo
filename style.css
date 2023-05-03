@@ -1,0 +1,100 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: lightblue;
+	color: #fff;
+	padding: 20px;
+}
+
+.logo img {
+	max-width: 150px;
+}
+
+main {
+	padding: 20px;
+}
+
+p{
+    color: black;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 20px;
+}
+
+#modal-container {
+	display: grid;
+	grid-template-columns: repeat(5, 2fr);
+	grid-gap: 20px;
+}
+
+.grid-item {
+	background-color: gray;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+    position: relative;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+	max-width: 30%;
+	margin-bottom: 10px;
+}
+
+.grid-item p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.selected-1 {
+    background-color: black !important;
+    color: white;
+}
+
+.selected-2 {
+    background-color: gray !important;
+}
+
+.selected-3 {
+    background-color: green !important;
+}
+
+.selected-4 {
+    background-color: yellow !important;
+}
+
+.selected-5 {
+    background-color: red !important;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .modal {
+        max-width: 90%;
+      }
+      
+      .modal-content {
+        max-height: 80%;
+        overflow-y: auto;
+      }
+
+      #modal-container {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 20px;
+    }
+}
