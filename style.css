@@ -7,15 +7,63 @@ body {
 header {
 	background-color: lightblue;
 	color: #fff;
-	padding: 20px;
+	padding: 0px;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkcyan;
+}
+
+li {
+  display: inline;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: lightblue;
+  color: black;
+}
+
+.active {
+  background-color: white;
+}
+
+.active a{
+  color: darkcyan;
 }
 
 .logo img {
 	max-width: 150px;
+  padding: 20px;
+}
+
+.icon {
+  display: none;
 }
 
 main {
-	padding: 20px;
+	padding: 10px;
 }
 
 p{
@@ -30,7 +78,7 @@ p{
 
 #modal-container {
 	display: grid;
-	grid-template-columns: repeat(5, 2fr);
+	grid-template-columns: repeat(3, 2fr);
 	grid-gap: 20px;
 }
 
@@ -39,7 +87,9 @@ p{
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +100,7 @@ p{
 
 .grid-item p {
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 0.5;
 }
 
 .selected-1 {
@@ -67,12 +117,52 @@ p{
 }
 
 .selected-4 {
-    background-color: yellow !important;
+    background-color: gold !important;
 }
 
 .selected-5 {
     background-color: red !important;
     color: white;
+}
+
+.selected-6 {
+  background-color: skyblue !important;
+  color: white;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    align-items: center;
+}
+
+.card-front img {
+	max-width: 30%;
+	margin-bottom: 10px;
+}
+
+.grid-item:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.grid-item:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-back .btn-add-status {
+    position: relative;
+
 }
 
 @media (max-width: 768px) {
@@ -97,4 +187,14 @@ p{
         grid-template-columns: repeat(3, 100px);
         grid-gap: 20px;
     }
+
+    #mylinks {
+      display: none;
+    }
+
+    .icon {
+      display: block;
+    }
+    
+    
 }

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minha Página</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Imports do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="cardio-pulmonar.png" alt="Logo">
+        </div>
+        <div class="topnav">
+            <div id="mylinks">
+                <ul>
+                    <li><a href="#" data-section="relatorios"><b>GERAR RELATÓRIO</b></a></li>
+                    <li><a href="#" data-section="cadastro"><b>CADASTRAR INFORMAÇÕES</b></a></li>
+                    <li class="active"><a href="#" data-section="leitos"><b>LEITOS</b></a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="leitos" class="active">
+            <main>
+                <div class="grid-container">
+                    <div class="grid-item" id="item1">
+                        <img src="paciente.png" alt="Imagem 1">
+                        <p>Descrição da Imagem 1</p>
+                        <button class="btn-add-status" data-toggle="modal" data-target="#status-modal">Adicionar
+                            Status</button>
+                    </div>
+                    <div class="grid-item" id="item2">
+                        <img src="paciente.png" alt="Imagem 2">
+                        <p>Descrição da Imagem 2</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item3">
+                        <img src="paciente.png" alt="Imagem 3">
+                        <p>Descrição da Imagem 3</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item4">
+                        <img src="paciente.png" alt="Imagem 4">
+                        <p>Descrição da Imagem 4</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item5">
+                        <img src="paciente.png" alt="Imagem 5">
+                        <p>Descrição da Imagem 5</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item6">
+                        <img src="paciente.png" alt="Imagem 6">
+                        <p>Descrição da Imagem 6</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item7">
+                        <img src="paciente.png" alt="Imagem 7">
+                        <p>Descrição da Imagem 7</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item8">
+                        <img src="paciente.png" alt="Imagem 8">
+                        <p>Descrição da Imagem 8</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item9">
+                        <img src="paciente.png" alt="Imagem 9">
+                        <p>Descrição da Imagem 9</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item10">
+                        <img src="paciente.png" alt="Imagem 10">
+                        <p>Descrição da Imagem 10</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item11">
+                        <img src="paciente.png" alt="Imagem 11">
+                        <p>Descrição da Imagem 11</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item12">
+                        <img src="paciente.png" alt="Imagem 12">
+                        <p>Descrição da Imagem 12</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item13">
+                        <img src="paciente.png" alt="Imagem 13">
+                        <p>Descrição da Imagem 13</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item14">
+                        <img src="paciente.png" alt="Imagem 14">
+                        <p>Descrição da Imagem 14</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item15">
+                        <img src="paciente.png" alt="Imagem 15">
+                        <p>Descrição da Imagem 15</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item16">
+                        <img src="paciente.png" alt="Imagem 16">
+                        <p>Descrição da Imagem 16</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item17">
+                        <img src="paciente.png" alt="Imagem 17">
+                        <p>Descrição da Imagem 17</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item18">
+                        <img src="paciente.png" alt="Imagem 18">
+                        <p>Descrição da Imagem 18</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item19">
+                        <img src="paciente.png" alt="Imagem 19">
+                        <p>Descrição da Imagem 19</p>
+                        <button class="btn-add-status">Adicionar Status</button>
+                    </div>
+                    <div class="grid-item" id="item20">
+                        <div class="card-front">
+                            <img src="paciente.png" alt="Imagem 20">
+                            <p class="nome_paciente"><b>Silvio Santos</b></p>
+                            <p class="idade_paciente">80 anos</p>
+                            <p class="risco_paciente">Risco Moderado</p>
+                        </div>
+                        <!-- Teste de exibição -->
+                        <div class="card-back">
+                            <img src="paciente.png" alt="Imagem 20">
+                            <p> Teste de exibição</p>
+                            <button class="btn-add-status">Adicionar Status</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de seleção de status -->
+                <!-- Modal -->
+                <div class="modal fade" id="status-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="status-modal-label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="status-modal-label">Selecione o Status</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <div class="grid-container" id="modal-container">
+                                        <button type="button" class="btn btn-dark"
+                                            data-status="1">Conexão<br>Perdida</button>
+                                        <button type="button" class="btn btn-light"
+                                            data-status="2">Leito<br>Vazio</button>
+                                        <button type="button" class="btn btn-primary"
+                                            data-status="6">Leito<br>Monitorado</button>
+                                        <button type="button" class="btn btn-success" data-status="3">Baixo <br>
+                                            Risco</button>
+                                        <button type="button" class="btn btn-warning"
+                                            data-status="4">Moderado<br>Risco</button>
+                                        <button type="button" class="btn btn-danger"
+                                            data-status="5">Alto<br>Risco</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <audio id="sem_conexao" src="sumiu.mp3"></audio>
+            <audio id="alarme" src="alarme.mp3"></audio>
+        </section>
+        <section id="cadastro">
+            <div class="form-container">
+                <h2>Cadastro de Paciente</h2>
+                <form id="cadastro-form">
+                    <div class="form-group">
+                        <label for="leito">Leito</label>
+                        <select class="form-control" id="leito" name="leito">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome do Paciente</label>
+                        <input type="text" class="form-control" id="nome" name="nome"
+                            placeholder="Insira o nome do paciente">
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input type="number" class="form-control" id="idade" name="idade"
+                            placeholder="Insira a idade do paciente">
+                    </div>
+                    <div class="form-group">
+                        <label for="risco">Risco</label>
+                        <select class="form-control" id="risco" name="risco">
+                            <option>Baixo</option>
+                            <option>Moderado</option>
+                            <option>Alto</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+        <section id="relatorios">
+            <main>
+                <h1>Emitir relatórios</h1>
+                <form>
+                    <label for="start-date"><b>Data de início:</b></label><br>
+                    <input type="date" id="start-date" name="start-date" value="<?= date('Y-m-d') ?>"><br><br>
+                    <label for="end-date"><b>Data de fim:</b></label><br>
+                    <input type="date" id="end-date" name="end-date" value="<?= date('Y-m-d') ?>">
+                    <br><br>
+                    <button type="submit" class="btn btn-primary">Emitir relatório</button>
+                </form>
+            </main>
+        </section>
+    </main>
+    <script>
+        var ocorrencias = [];
+
+        function adicionarLinhaTabela(contagem, momento, idade, risco) {
+            var novaLinha = $("<tr>");
+            novaLinha.append($("<td>").text(contagem));
+            novaLinha.append($("<td>").text(momento));
+            novaLinha.append($("<td>").text(idade));
+            novaLinha.append($("<td>").text(risco));
+            $("#tabela-ocorrencias tbody").append(novaLinha);
+        }
+
+        function saveAs(blob, fileName) {
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            document.body.appendChild(a);
+            a.style = "display: none";
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+
+
+        $(document).ready(function () {
+            // Esconde todas as seções exceto a primeira (ou a que tem a classe active)
+            $('main section:not(:first)').hide();
+            // Adiciona evento de clique nos links da navbar
+            $('header ul li a').click(function () {
+                // Remove a classe active de todos os itens da navbar
+                $('header ul li').removeClass('active');
+                // Adiciona a classe active ao item da navbar clicado
+                $(this).parent().addClass('active');
+                // Oculta todas as seções exceto a correspondente ao item da navbar clicado
+                var sectionId = $(this).data('section');
+                $('main section:not(#' + sectionId + ')').hide();
+                $('#' + sectionId).show();
+                return false;
+            });
+            $('.btn-add-status').on('click', function () {
+                var $item = $(this).closest('.grid-item');
+                $('#status-modal').data('item', $item).modal('show');
+            });
+
+            $('#status-modal button').on('click', function () {
+                var $item = $('#status-modal').data('item');
+                var status = $(this).data('status');
+                var itemId = $item.attr('id');
+                var $img = $item.find('img');
+                var momento = new Date().toLocaleTimeString();
+                var idade = $item.find('.idade_paciente').text();
+                var risco = $item.find('.risco_paciente').text();
+
+                $item.removeClass('selected-1 selected-2 selected-3 selected-4 selected-5 selected-6');
+                $item.addClass('selected-' + status);
+
+                if (status === 1) {
+                    $img.attr('src', 'conexao-perdida.png');
+                    var $audio = $('#sem_conexao')[0];
+                    $audio.play();
+
+                } else if (status === 2) {
+                    $item.find('.nome_paciente').text('');
+                    $item.find('.idade_paciente').text('');
+                    $item.find('.risco_paciente').text('');
+                }
+                else if (status === 5) {
+                    $img.attr('src', 'paciente.png');
+                    var $audio = $('#alarme')[0];
+                    $audio.play();
+                    var novaOcorrencia = {
+                        contagem: ocorrencias.length + 1,
+                        momento: momento,
+                        idade: idade,
+                        risco: risco
+                    };
+                    ocorrencias.push(novaOcorrencia);
+                    adicionarLinhaTabela(novaOcorrencia.contagem, novaOcorrencia.momento, novaOcorrencia.idade, novaOcorrencia.risco);
+
+                } else {
+                    $img.attr('src', 'paciente.png');
+                }
+                $('#status-modal').modal('hide');
+            });
+
+            $('#cadastro-form').on('submit', function (e) {
+                e.preventDefault(); // previne o comportamento padrão do formulário
+
+                // recupera os valores do formulário
+                var leito = $('#leito').val();
+                var nome = $('#nome').val();
+                var idade = $('#idade').val();
+                var risco = $('#risco').val();
+
+                // seleciona o elemento do paciente a ser alterado
+                var paciente = $('#item' + leito + ' .card-front');
+
+                // altera os valores do paciente
+                paciente.find('.nome_paciente').text(nome);
+                paciente.find('.idade_paciente').text(idade + ' anos');
+                paciente.find('.risco_paciente').text(risco);
+
+                $("#cadastro-form")[0].reset();
+                $("#status-modal").modal("hide");
+
+            });
+
+            $(document).on("submit", "form", function (event) {
+                event.preventDefault();
+
+                // obtém as datas de início e fim
+                var startDate = $("#start-date").val();
+                var endDate = $("#end-date").val();
+
+                // filtra ocorrências que ocorreram entre as datas de início e fim
+                var ocorrenciasFiltradas = ocorrencias.filter(function (ocorrencia) {
+                    var ocorrenciaDate = new Date(ocorrencia.momento).toLocaleDateString();
+                    return (ocorrenciaDate >= startDate && ocorrenciaDate <= endDate);
+                });
+
+                // cria o conteúdo do arquivo txt
+                var content = "Contagem\tMomento\tIdade\tRisco\n";
+                ocorrenciasFiltradas.forEach(function (ocorrencia) {
+                    content += ocorrencia.contagem + "\t" + ocorrencia.momento + "\t" + ocorrencia.idade + "\t" + ocorrencia.risco + "\n";
+                });
+
+                // gera o nome do arquivo
+                var dataAtual = new Date().toLocaleDateString().replace(/\//g, "-");
+                var fileName = "relatorio-" + dataAtual + ".txt";
+
+                // cria o arquivo e faz download
+                var blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+                saveAs(blob, fileName);
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
