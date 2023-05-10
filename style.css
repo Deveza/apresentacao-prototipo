@@ -18,7 +18,6 @@ section.active {
   display: block;
 }
 
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -116,6 +115,10 @@ p{
     background-color: green !important;
 }
 
+.selected-3 p {
+  color: white;
+}
+
 .selected-4 {
     background-color: gold !important;
 }
@@ -123,6 +126,10 @@ p{
 .selected-5 {
     background-color: red !important;
     color: white;
+}
+
+.selected-5 p {
+  color: white;
 }
 
 .selected-6 {
@@ -138,8 +145,14 @@ p{
     right: 0;
     bottom: 0;
     padding: 20px;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     transition: transform 0.5s;
+}
+
+.card-front p.nome_paciente{
+  font-weight: bold;
 }
 
 .card-back {
