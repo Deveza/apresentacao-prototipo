@@ -387,19 +387,37 @@
         <section id="relatorios">
             <main>
                 <h1>Emitir relatórios</h1>
-                <form>
-                    <label for="start-date"><b>Data de início:</b></label><br>
-                    <input type="date" id="start-date" name="start-date" value="<?= date('Y-m-d') ?>"><br><br>
-                    <label for="end-date"><b>Data de fim:</b></label><br>
-                    <input type="date" id="end-date" name="end-date" value="<?= date('Y-m-d') ?>">
-                    <br><br>
-                    <button type="submit" class="btn btn-primary" id="btn-relatorio">Emitir relatório</button>
-                </form>
+                <div id="gerar-relatorios">
+                    <div id="profissional-medico">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome" required>
+                        <br> <br>
+                        <label for="registro">Nº de Registro:</label><br>
+                        <input type="text" id="registro" name="registro" required>
+                        <br> <br>
+                        <button type="button" id="btn-check">Verificar</button>
+                    </div>
+                    <div id="form-relatorios" style="display:none">
+                        <label for="start-date"><b>Data de início:</b></label><br>
+                        <input type="date" id="start-date" name="start-date" value="<?= date('Y-m-d') ?>"><br><br>
+                        <label for="end-date"><b>Data de fim:</b></label><br>
+                        <input type="date" id="end-date" name="end-date" value="<?= date('Y-m-d') ?>">
+                        <br><br>
+                        <button type="submit" class="btn btn-primary" id="btn-relatorio" style="display:none">Emitir
+                            relatório</button>
+                    </div>
+                </div>
             </main>
         </section>
     </main>
     <script>
         var ocorrencias = [];
+
+        var profissionais = [
+            { nome: "Ana", registro: "123" },
+            { nome: "Maria", registro: "456" },
+            { nome: "Braga", registro: "789" }
+        ];
 
         function adicionarLinhaTabela(contagem, momento, idade, risco) {
             var novaLinha = $("<tr>");
@@ -497,21 +515,40 @@
 
             });
 
+            $("#form-relatorios").hide();
+
+            // Função para verificar se o profissional está cadastrado
             $(document).ready(function () {
-                $('#btn-relatorio').click(function () {
-                    var relatorio = '';
-
-                    for (var i = 0; i < ocorrencias.length; i++) {
-                        relatorio += 'Contagem: ' + ocorrencias[i].contagem + '\n';
-                        relatorio += 'Momento: ' + ocorrencias[i].momento + '\n';
-                        relatorio += 'Idade: ' + ocorrencias[i].idade + '\n';
-                        relatorio += 'Risco: ' + ocorrencias[i].risco + '\n\n';
+                $('#form-relatorios').hide();
+                $('#btn-check').click(function () {
+                    var nome = $('#nome-profissional').val();
+                    var registro = $('#registro-profissional').val();
+                    if (nome !== "erro") {
+                        $('#profissional-medico').hide();
+                        $('#form-relatorios').show();
+                        $("#btn-relatorio").show();
+                    } else {
+                        alert("Profissional não cadastrado. Por favor, verifique os dados informados.");
                     }
-
-                    var blob = new Blob([relatorio], { type: "text/plain;charset=utf-8" });
-                    saveAs(blob, "relatorio.txt");
                 });
             });
+
+
+        $(document).ready(function () {
+            $('#btn-relatorio').click(function () {
+                var relatorio = '';
+
+                for (var i = 0; i < ocorrencias.length; i++) {
+                    relatorio += 'Contagem: ' + ocorrencias[i].contagem + '\n';
+                    relatorio += 'Momento: ' + ocorrencias[i].momento + '\n';
+                    relatorio += 'Idade: ' + ocorrencias[i].idade + '\n';
+                    relatorio += 'Risco: ' + ocorrencias[i].risco + '\n\n';
+                }
+
+                var blob = new Blob([relatorio], { type: "text/plain;charset=utf-8" });
+                saveAs(blob, "relatorio.txt");
+            });
+        });
         });
     </script>
 </body>
