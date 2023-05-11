@@ -389,11 +389,11 @@
                 <h1>Emitir relatórios</h1>
                 <div id="gerar-relatorios">
                     <div id="profissional-medico">
-                        <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="nome" required>
+                        <label for="nome-check">Nome:</label><br>
+                        <input type="text" id="nome-check" name="nome-check" required>
                         <br> <br>
                         <label for="registro">Nº de Registro:</label><br>
-                        <input type="text" id="registro" name="registro" required>
+                        <input type="text" id="registro-check" name="registro-check" required>
                         <br> <br>
                         <button type="button" id="btn-check">Verificar</button>
                     </div>
@@ -518,23 +518,21 @@
             $("#form-relatorios").hide();
 
             // Função para verificar se o profissional está cadastrado
-            $(document).ready(function () {
-                $('#form-relatorios').hide();
-                $('#btn-check').click(function () {
-                    var nome = $('#nome-profissional').val();
-                    var registro = $('#registro-profissional').val();
-                    if (nome !== "erro") {
-                        $('#profissional-medico').hide();
-                        $('#form-relatorios').show();
-                        $("#btn-relatorio").show();
-                    } else {
-                        alert("Profissional não cadastrado. Por favor, verifique os dados informados.");
-                    }
-                });
+
+            $('#form-relatorios').hide();
+            $('#btn-check').click(function () {
+                var nome = $('#nome-check').val();
+                var registro = $('#registro-check').val();
+                if (nome != "erro" || registro != "erro") {
+                    $('#profissional-medico').hide();
+                    $('#form-relatorios').show();
+                } else {
+                    alert("Profissional não cadastrado. Por favor, verifique os dados informados.");
+                }
             });
 
 
-        $(document).ready(function () {
+
             $('#btn-relatorio').click(function () {
                 var relatorio = '';
 
@@ -548,7 +546,6 @@
                 var blob = new Blob([relatorio], { type: "text/plain;charset=utf-8" });
                 saveAs(blob, "relatorio.txt");
             });
-        });
         });
     </script>
 </body>
